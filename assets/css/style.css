@@ -1,18 +1,15 @@
-.mrgn {
-    margin-top: 15vh;
-}
-
-.mrgn1 {
-    vertical-align: middle;
-}
-
-.form-container {
-    border: 0px solid;
-    padding: 30px 40px;
-    margin-top: 15vh;
-    -webkit-box-shadow: 1px 4px 51px 11px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 4px 51px 11px rgba(0, 0, 0, 0.75);
-    box-shadow: 1px 4px 51px 11px rgba(0, 0, 0, 0.75);
+.aslinkbtn {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 20 !important;
+    font: inherit;
+    color: #747474;
+    font-size: 25px;
+    margin-left: 4vh;
+    /*опционально*/
+    /*border-bottom:1px solid #444; 
+     cursor: pointer;*/
 }
 
 body {
