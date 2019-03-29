@@ -1,31 +1,3 @@
-.aslinkbtn {
-    background: none !important;
-    color: inherit;
-    border: none;
-    padding: 20 !important;
-    font: inherit;
-    color: #747474;
-    font-size: 25px;
-    margin-left: 4vh;
-    /*опционально*/
-    /*border-bottom:1px solid #444; 
-     cursor: pointer;*/
-}
-
-.button {
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-}
-
-.button:hover {
-    border-color: #000000;
-    color: white;
-}
-
-button:focus {
-    outline: 0;
-}
-
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
@@ -44,20 +16,7 @@ body {
     padding-top: 60px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
+.sidenav .close_button {
     position: absolute;
     top: 0;
     right: 25px;
@@ -65,23 +24,9 @@ body {
     margin-left: 50px;
 }
 
-#main {
+#open_menu_button {
     transition: margin-left .5s;
     padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
 }
 
 .menu_list {
@@ -92,6 +37,31 @@ a[data-toggle="collapse"] {
     list-style-type: none;
     width: 100%;
     white-space: nowrap;
+}
+
+.menu_button {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 20 !important;
+    font: inherit;
+    color: #747474;
+    font-size: 25px;
+    margin-left: 4vh;
+    /*опционально*/
+    /*border-bottom:1px solid #444; 
+     cursor: pointer;*/
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.menu_button:hover {
+    border-color: #000000;
+    color: white;
+}
+
+menu_button:focus {
+    outline: 0;
 }
 
 .fade-enter-active,
@@ -121,3 +91,36 @@ a[data-toggle="collapse"] {
         margin-left: 0;
     }
 }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/*
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+*/
