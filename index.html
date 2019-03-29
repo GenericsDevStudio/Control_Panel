@@ -29,7 +29,9 @@
             <transition name="fade">
                 <ul v-if="show_list" class="menu_list">
                     <li v-for="item in menuList" ref="menuButton">
-                        <button class="menu_button">{{ item.title }}</button>
+                        <router-link :to="item.title">
+                            <button @click="onMenuBtnClick(item.title)" class="menu_button">{{ item.title }}</button>
+                        </router-link>
                     </li>
                 </ul>
             </transition>
@@ -39,23 +41,29 @@
         <div id="open_menu_button" ref="openMenuButton">
             <span @click="menuTrigger(true)"><i class="fas fa-bars"></i></span>
         </div>
+        
+        
     </div>
 
    
    
     <div class="page_app">
-        
-
+       <!--{{ page }}-->
+        <!--<template v-bind:class="page">{{ page }}</template>-->
+        <router-view></router-view>
+        <template id="#main" src="assets/sections/main_section.html">1</template>
     </div>
     
     
 
     <!-- Scripts -->
-    <script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <!--<script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>-->
+    <script type="application/javascript" src="assets/js/jquery-3.3.1.js"></script>
     <script type="application/javascript" src="assets/js/bootstrap.min.js"></script>
     <!-- Скрипты подключать вместо этой строки -->
     <script type="application/javascript" src="assets/js/vue.js"></script>
     <script type="application/javascript" src="assets/js/axios.js"></script>
+    <script type="application/javascript" src="assets/js/vue-router.js"></script>
     <script type="application/javascript" src="assets/js/main_script.js"></script>
 </body>
 

@@ -1,7 +1,26 @@
+/* function getTemplateData(templateName) {
+    console.log("in");
+    var div = document.createElement('div');
+    $div.load('1.txt');
+    $
+    alert(data.html());
+    return '<div>Yeha</div>';
+}; */
 
-// Menu Controller //
+const Main = { template: '#main' };
+const Workspace = { template: '<div>Workspace</div>' };
 
-new Vue({
+const routes = [
+  { path: '/Main', component: Main },
+  { path: '/Workspace', component: Workspace }
+];
+
+const router = new VueRouter({
+  routes 
+});
+
+
+var menu_app = new Vue({
     el: '.menu_app',
     data: {
         menuList: [
@@ -15,11 +34,12 @@ new Vue({
             { title: "Blog", access: ""},
             { title: "Settings", access: ""},
             { title: "Log Out", access: ""} ],
-        show_list: false
+        show_list: false,
+        page: "Main"
     },
     methods: {
         menuTrigger(action) {
-            if(action) {
+            if (action) {
                 this.$refs.menu.style.width = "250px";
                 this.$refs.openMenuButton.style.marginLeft = "250px";
                 this.show_list = true;
@@ -30,8 +50,28 @@ new Vue({
                 this.show_list = false;
                 document.body.style.backgroundColor = "white";
             }
+        },
+
+        onMenuBtnClick(pageTitle) {
+            alert(pageTitle);
+            page_app.$data.page = pageTitle;
         }
-    }
+    },
+    router
+});
+
+var page_app = new Vue({
+    el: '.page_app',
+    data: {
+        page: "Main"
+    },
+    methods: {
+        changePageContent(pageTitle) {
+            this.page = pageTitle;
+            alert("Page");
+        }
+    },
+    router
 });
 
 // Page Controller //
