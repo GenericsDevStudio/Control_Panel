@@ -40,11 +40,18 @@
             <!---<a href="projSelect.html">Projects</a>
             <a href="adminLog.html">Admin Panel</a>
             <a href="index.html">Log Out</a>--->
-            <button class="aslinkbtn button">Projects</button><br>
+            <transition name="fade">
+                <ul v-if="show_list" class="menu_list">
+                    <li v-for="item in menuButtons" ref="menuButton">
+                        <button class="aslinkbtn button">{{ item.title }}</button>
+                    </li>    
+                </ul>
+            </transition>
+            <!--<button class="aslinkbtn button">Projects</button><br>
             <button class="aslinkbtn button">Team</button><br>
             <button class="aslinkbtn button">User Data</button><br>
             <button class="aslinkbtn button">Admin Panel</button><br>
-            <button class="aslinkbtn button">Log Out</button><br>
+            <button class="aslinkbtn button">Log Out</button><br>-->
         </div>
 
         <div id="main" ref="openMenuButton">
@@ -54,7 +61,6 @@
     </div>
     
     <div class="page_app">
-        
         <!--<div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">

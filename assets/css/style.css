@@ -13,13 +13,13 @@
 }
 
 .button {
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 .button:hover {
-  border-color: #000000; 
-  color: white;
+    border-color: #000000;
+    color: white;
 }
 
 button:focus {
@@ -82,6 +82,26 @@ body {
 
 a[data-toggle="collapse"] {
     position: relative;
+}
+
+.menu_list {
+    padding: 0;
+}
+
+.menu_list li {
+    list-style-type: none;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 
 .dropdown-toggle::after {
