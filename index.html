@@ -11,41 +11,61 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Стили подключать вместо этой строки -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="css/global.css">
 
     <title>Generics Control</title>
 
 </head>
 
 <body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="projSelect.html">Projects</a>
-        <a href="adminLog.html">Admin Panel</a>
-        <a href="index.html">Log Out</a>
-    </div>
-    <div id="main">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
 
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <h1 style="text-align: center">Account Data</h1>
-                <h4 style="text-align: center">Position</h4>
-                <div style="width:400px;height:216px;border:1px solid #000;" class="mrgn">User Data</div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div style="width:400px;height:300px;border:1px solid #000;" class="mrgn">Team</div>
-            </div>
+    <div class="menu_app">
+        
+        <!--<div id="mySidenav" class="sidenav" ref="menu">
+            <a href="javascript:void(0)" class="closebtn" @click="menuTrigger(false)">&times;</a>
+            <a href="projSelect.html">Projects</a>
+            <a href="adminLog.html">Admin Panel</a>
+            <a href="index.html">Log Out</a>
         </div>
+
+        <div id="main" ref="openMenuButton">
+            <span style="font-size:30px;cursor:pointer" @click="menuTrigger(true)">&#9776;</span>
+        </div> -->
+        
+        <div id="mySidenav" class="sidenav" ref="menu">
+            <a href="javascript:void(0)" class="closebtn" @click="menuTrigger(false)"><i class="fas fa-window-close"></i></a>
+            <a href="projSelect.html">Projects</a>
+            <a href="adminLog.html">Admin Panel</a>
+            <a href="index.html">Log Out</a>
+        </div>
+
+        <div id="main" ref="openMenuButton">
+            <span style="font-size:30px;cursor:pointer" @click="menuTrigger(true)"><i class="fas fa-bars"></i></span>
+        </div>
+        
     </div>
+    
+    <div class="page_app">
+        
+        <!--<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
 
-
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <h1 style="text-align: center">Account Data</h1>
+                    <h4 style="text-align: center">Position</h4>
+                    <div style="width:400px;height:216px;border:1px solid #000;" class="mrgn">User Data</div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div style="width:400px;height:300px;border:1px solid #000;" class="mrgn">Team</div>
+                </div>
+            </div>
+        </div> -->
+        
+    </div>
 
     <!-- Scripts -->
     <script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
@@ -53,7 +73,7 @@
     <!-- Скрипты подключать вместо этой строки -->
     <script type="application/javascript" src="assets/js/vue.js"></script>
     <script type="application/javascript" src="assets/js/axios.js"></script>
-    <script type="application/javascript" src="assets/js/genericsControl.js"></script>
+    <script type="application/javascript" src="assets/js/main_script.js"></script>
 </body>
 
 </html>
