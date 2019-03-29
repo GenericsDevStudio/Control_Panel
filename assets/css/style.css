@@ -29,6 +29,11 @@ body {
     padding: 16px;
 }
 
+#open_menu_button span {
+    font-size: 30px;
+    cursor: pointer;
+}
+
 .menu_list {
     padding: 0;
 }
@@ -60,7 +65,7 @@ body {
     color: white;
 }
 
-menu_button:focus {
+.menu_button:focus {
     outline: 0;
 }
 

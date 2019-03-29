@@ -9,9 +9,11 @@ new Vue({
             { title: "Workspace", access: ""},
             { title: "Projects", access: ""},
             { title: "Statistics", access: ""},
+            { title: "Team", access: ""},
             { title: "Apps", access: ""},
             { title: "Admin Panel", access: ""},
             { title: "Blog", access: ""},
+            { title: "Settings", access: ""},
             { title: "Log Out", access: ""} ],
         show_list: false
     },
