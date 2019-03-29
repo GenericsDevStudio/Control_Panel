@@ -1,5 +1,4 @@
-
-new Vue ({
+new Vue({
     el: '.login_app',
     data: {
         email: "",
@@ -9,7 +8,7 @@ new Vue ({
     methods: {
         sendLoginQuery() {
             console.log(this.email + " " + this.password + " " + this.saveUserToStorage);
-            if(true) {
+            if (true) {
                 document.location.href = "index.html";
             }
         }
