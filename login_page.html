@@ -2,62 +2,68 @@
 <html lang="en">
 
 <head>
-   
+
     <!-- META DATA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/login_style.css">
-    <link rel="stylesheet" href="assets/css/login_style.css">
-    
+
     <title>Sign In</title>
-    
+
 </head>
 
 <body>
-    
-    
-     <div class="container-fluid bg">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12"></div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
 
+
+    <div class="container-fluid bg login_app">
+        <div class="row">
+           
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <form class="form-container">
+                   
                     <div class="container">
-                        <h1 style="color: azure">Log In</h1>
+                        <h1 style="color: azure">Sign In</h1>
                     </div>
+                    
                     <div class="form-group">
                         <label for="exampleInputEmail1" style="color: azure">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" v-model="email">
                     </div>
+                    
                     <div class="form-group">
                         <label for="exampleInputPassword1" style="color: azure">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" v-model="password">
                     </div>
+                    
                     <div class="checkbox">
                         <label style="color: azure">
-                            <input type="checkbox"> Remember Me
+                            <input type="checkbox" v-model="saveUserToStorage"> Remember Me
                         </label>
                     </div>
-                    <a href="home.html" class="btn btn-success btn-block">Submit</a>
+                    
+                    <a @click="sendLoginQuery()" class="btn btn-success btn-block">Submit</a>
                     <!---<button type="submit" class="btn btn-success btn-block">Submit</button>--->
-
                 </form>
             </div>
+            
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
         </div>
     </div>
-    
+
     <!-- Scripts -->
     <script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="application/javascript" src="assets/js/bootstrap.min.js"></script>
     <!-- Скрипты подключать вместо этой строки -->
     <script type="application/javascript" src="assets/js/vue.js"></script>
     <script type="application/javascript" src="assets/js/axios.js"></script>
-    
+    <script type="application/javascript" src="assets/js/login_script.js"></script>
+
 </body>
-    
+
 </html>
