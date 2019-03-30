@@ -9,7 +9,7 @@ ul {
 }
 
 .mrgn{
-    margin-top: 2vh;
+    /*margin-top: 2vh;*/
 }
 
 ul li {
@@ -19,6 +19,7 @@ ul li {
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    list-style-type: none;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -73,7 +74,7 @@ ul li.checked::before {
 
 .header {
     background-color: #0033cc;
-    padding: 30px 40px;
+    /*padding: 30px 40px;*/
     color: white;
     text-align: center;
 }
@@ -112,4 +113,8 @@ input {
 
 .addBtn:hover {
     background-color: #bbb;
+}
+
+.todo_list {
+    padding: 0;
 }
