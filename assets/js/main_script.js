@@ -21,12 +21,20 @@ var menu_app = new Vue({
                 this.$refs.menu.style.width = "250px";
                 this.$refs.openMenuButton.style.marginLeft = "250px";
                 this.show_list = true;
-                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                //this.$refs.blured_space.style.display = true;
+                $(".blured_space").css("display", "block");
+                //$(".window").style.backgroundColor = "rgba(0,0,0,0.4)";
+                //$(".window").css("background", "rgba(0,0,0,0.4)");
+                //$(".container-fluid").css("background", "rgba(0,0,0,0.4)");
             } else {
                 this.$refs.menu.style.width = "0";
                 this.$refs.openMenuButton.style.marginLeft = "0";
                 this.show_list = false;
-                document.body.style.backgroundColor = "white";
+                $(".blured_space").css("display", "none");
+                //this.$refs.blured_space.style.display = false;
+                //$(".window").style.backgroundColor = "white";
+                //$(".window").css("background", "white");
+                //$(".container-fluid").css("background", "white");
             }
         },
 
