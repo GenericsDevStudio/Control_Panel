@@ -1,0 +1,13 @@
+.current_project .card-header {
+    background: #ef476f;
+    color: #fefefd;
+}
+
+.projects_list {
+    height: 505px;
+}
+
+.projects_list .card-header {
+    background: #ffd166;
+    color: #fefefd;
+}
