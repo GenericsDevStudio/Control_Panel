@@ -107,6 +107,40 @@ body {
     }
 }
 
+.page_app {
+    padding-top: 20px;
+}
+
+.card {
+    height: 175px;
+    border-radius: 5px;
+}
+
+.clients_list {
+    padding: 0;
+    overflow-x: auto;
+}
+.clients_list .card{
+    height: 145px;
+}
+
+.row-two {
+    padding-top: 40px;   
+}
+.row-two .card {
+    height: 290px;
+}
+.huge_list {
+    height: 505px;
+}
+
+.page_header {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.page_header small {
+    font-size: 16px;
+}
 
 /*
 

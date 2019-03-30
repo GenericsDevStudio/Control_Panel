@@ -20,127 +20,135 @@
 </head>
 
 <body>
-    
-    <!-- Menu -->
 
-    <div class="menu_app">
-        <div class="sidenav" ref="menu">
-            <button class="menu_button close_button" @click="menuTrigger(false)"><i class="fas fa-times fa-xs"></i></button>
-            <transition name="fade">
-                <ul v-if="show_list" class="menu_list">
-                    <li v-for="item in menuList" ref="menuButton">
-                        <button @click="onMenuBtnClick(item.controller)" class="menu_button">{{ item.title }}</button>
-                    </li>
-                </ul>
-            </transition>
-        </div>
-        <div id="open_menu_button" ref="openMenuButton">
-            <span @click="menuTrigger(true)"><i class="fas fa-bars"></i></span>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Menu -->
+
+            <div class="menu_app col-md-1">
+                <div class="sidenav" ref="menu">
+                    <button class="menu_button close_button" @click="menuTrigger(false)"><i class="fas fa-times fa-xs"></i></button>
+                    <transition name="fade">
+                        <ul v-if="show_list" class="menu_list">
+                            <li v-for="item in menuList" ref="menuButton">
+                                <button @click="onMenuBtnClick(item.controller)" class="menu_button">{{ item.title }}</button>
+                            </li>
+                        </ul>
+                    </transition>
+                </div>
+                <div id="open_menu_button" ref="openMenuButton">
+                    <span @click="menuTrigger(true)"><i class="fas fa-bars"></i></span>
+                </div>
+            </div>
+
+            <!-- //// -->
+
+
+
+            <!-- Content -->
+
+            <div class="page_app col-md-11">
+                <h2 class="page_header">
+                    {{currentSection}}
+                    <small class="text-muted">control panel developer-version</small>
+                </h2>
+                <component v-bind:is="currentSection"></component>
+            </div>
+
+            <!-- /////// -->
+
         </div>
     </div>
 
-    <!-- //// -->
-    
-    
-   
-    <!-- Content -->
-   
-    <div class="page_app">
-        <component v-bind:is="currentSection"></component>
-    </div>
-    
-    <!-- /////// -->
-    
-    
-    
     <!-- ////////////////////////// Templates ////////////////////////// -->
-    
-    
-    
+
+
+
     <!-- Main Section -->
-    
+
     <template id="main-template">
         <div>Main</div>
     </template>
-    
-    
-    
-    
+
+
+
+
     <!-- Workspace Section -->
-    
+
     <template id="workspace-template">
         <div>Workspace</div>
     </template>
 
-    
-    
-    
+
+
+
     <!-- Projects Section -->
-   
+
     <template id="projects-template">
         <div>Projects</div>
     </template>
 
-    
-    
-    
+
+
+
     <!-- Statistics Section -->
-   
+
     <template id="statistics-template">
         <div>Statistics</div>
     </template>
 
-    
-    
-    
+
+
+
     <!-- Team Section -->
-    
+
     <template id="team-template">
         <div>Team</div>
     </template>
 
-    
-    
-    
+
+
+
     <!-- Apps Section -->
-    
+
     <template id="apps-template">
         <div>Apps</div>
     </template>
-    
-    
-    
-    
+
+
+
+
     <!-- Admin Section -->
-    
+
     <template id="admin-template">
         <div>Admin</div>
     </template>
-    
-    
-    
-    
+
+
+
+
     <!-- Blog Section -->
-    
+
     <template id="blog-template">
         <div>Blog</div>
     </template>
 
-    
-    
-    
+
+
+
     <!-- Settings Section -->
-    
+
     <template id="settings-template">
         <div>Settings</div>
     </template>
 
 
     <!-- ////////////////////////// ///////// ////////////////////////// -->
-   
-   
+
+
     <!-- Scripts -->
-    
+
     <!--<script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>-->
     <script type="application/javascript" src="assets/js/jquery-3.3.1.js"></script>
     <script type="application/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -198,9 +206,8 @@
         </div> 
         
          <!--<router-link :to="item.title">-->
-         <!--</router-link>-->
-        
-         <!--{{ page }}-->
-        <!--<template v-bind:class="page">{{ page }}</template>-->
-        <!--<router-view></router-view>-->
+<!--</router-link>-->
 
+<!--{{ page }}-->
+<!--<template v-bind:class="page">{{ page }}</template>-->
+<!--<router-view></router-view>-->
