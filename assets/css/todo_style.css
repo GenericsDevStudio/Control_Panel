@@ -21,7 +21,9 @@
     -ms-user-select: none;
     user-select: none;
 }
-
+.ulliz:nth-child(odd) {
+  background: #f9f9f9;
+}
 .header {
     background-color: #0033cc;
     /*padding: 30px 40px;*/
