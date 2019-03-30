@@ -25,9 +25,7 @@
 
     <div class="menu_app">
         <div class="sidenav" ref="menu">
-           
             <button class="menu_button close_button" @click="menuTrigger(false)"><i class="fas fa-times fa-xs"></i></button>
-            
             <transition name="fade">
                 <ul v-if="show_list" class="menu_list">
                     <li v-for="item in menuList" ref="menuButton">
@@ -35,20 +33,23 @@
                     </li>
                 </ul>
             </transition>
-            
         </div>
-
         <div id="open_menu_button" ref="openMenuButton">
             <span @click="menuTrigger(true)"><i class="fas fa-bars"></i></span>
         </div>
-        
     </div>
 
+    <!-- //// -->
+    
+    
+   
     <!-- Content -->
    
     <div class="page_app">
         <component v-bind:is="currentSection"></component>
     </div>
+    
+    <!-- /////// -->
     
     
     
@@ -69,13 +70,6 @@
     
     <template id="workspace-template">
         <div>Workspace</div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <p>Hello World!!!</p>
-                </div>
-            </div>
-        </div>
     </template>
 
     
@@ -113,7 +107,7 @@
     <template id="apps-template">
         <div>Apps</div>
     </template>
-
+    
     
     
     
@@ -122,7 +116,7 @@
     <template id="admin-template">
         <div>Admin</div>
     </template>
-
+    
     
     
     
@@ -142,7 +136,7 @@
     </template>
 
 
-   
+    <!-- ////////////////////////// ///////// ////////////////////////// -->
    
    
     <!-- Scripts -->
