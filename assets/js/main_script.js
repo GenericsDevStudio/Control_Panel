@@ -11,7 +11,7 @@ var menu_app = new Vue({
             { title: "Admin Panel", access: "", controller: "admin_section"},
             { title: "Blog", access: "", controller: "blog_section"},
             { title: "Settings", access: "", controller: "settings_section"},
-            { title: "Log Out", access: "", controller: ""} ],
+            { title: "Log Out", access: "", controller: "log_out"} ],
         show_list: false,
         page: "Main"
     },
@@ -40,8 +40,13 @@ var menu_app = new Vue({
 
         onMenuBtnClick(section) {
             //alert(section);
-            page_app.$data.currentSection = section;
-            this.menuTrigger(false);
+            if(section == "log_out") {      
+                // TODO
+                document.location.href = "login_page.html";
+            } else {
+                page_app.$data.currentSection = section;
+                this.menuTrigger(false);
+            }
         }
     }
 });
