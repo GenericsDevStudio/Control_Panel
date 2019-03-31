@@ -21,3 +21,6 @@
 .information-tabs .tab-pane {
     min-height: 325px;
 }
+.jumbotron{
+     border-radius: 0 !important;
+}
