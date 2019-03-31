@@ -1,3 +1,23 @@
 .a {
     text-align: center;
 }
+
+.projects-info-container {
+    margin-top: 30px;
+}
+
+.project-info-header {
+    
+}
+
+.project-create-date h3 {
+    margin-top: 0;
+}
+
+.project-progress {
+    margin-top: 30px;   
+}
+
+.information-tabs .tab-pane {
+    min-height: 325px;
+}
