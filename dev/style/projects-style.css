@@ -33,3 +33,19 @@
     border-right-width: 0.5px;
 }
 
+.current_project .news-card .card-body {
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.current_project .news-card .card-body li {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.current_project .comments-card .card-body {
+    overflow-y: scroll;
+}
+
+
