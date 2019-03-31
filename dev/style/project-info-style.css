@@ -1,15 +1,21 @@
 .a {
     text-align: center;
 }
-.iconA{
+/*.iconA{
     align-content: center;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     margin-left: 15vh;
-}
+}*/
 .bsA{
     align-content: center;
     width: 400px;
     height: 200px;
     margin-left: 1vh;
+}
+.iconA {
+    width: 16px;
+    height: 16px;
+    background-image: <i class="fab fa-bootstrap"></i>;
+    background-size: 100%;
 }
