@@ -1,9 +1,22 @@
 .current_project .card {
     padding: 0;
 }
-.current_project .card-header {
+ .card-header {
     /*background: #ef476f;
     color: #fefefd;*/
+}
+
+.current_project .project-name-header-row {
+    margin-top: 10px;
+}
+
+
+.project-progress-row {
+    margin-top: 55px;
+}
+
+.links-row {
+    margin-top: 64px;
 }
 
 .projects_list {
@@ -21,7 +34,7 @@
 }
 
 .bottom-row {
-    margin-top: 225px;
+    margin-top: 10px;
     margin-right: -20px;
     margin-left: -20px;
 }
@@ -52,5 +65,43 @@
 .current_project .comments-card .card-body {
     overflow-y: scroll;
 }
+
+.one, .two, .three{
+    position:absolute;
+	margin-top:-10px;
+	z-index:1;
+	height:40px;
+	width:40px;
+	border-radius:25px;
+	
+}
+.one{
+	left:25%;
+}
+.two{
+	left:50%;
+}
+.three{
+	left:75%;
+}
+.primary-color{
+	background-color:#4989bd;
+}
+.success-color{
+	background-color:#5cb85c;
+}
+.danger-color{
+	background-color:#d9534f;
+}
+.warning-color{
+	background-color:#f0ad4e;
+}
+.info-color{
+	background-color:#5bc0de;
+}
+.no-color{
+	background-color:inherit;
+}
+
 
 
