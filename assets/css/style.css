@@ -153,8 +153,8 @@ body {
 }
 
 .current_project .card-header {
-    background: #ef476f;
-    color: #fefefd;
+    /*background: #ef476f;
+    color: #fefefd;*/
 }
 
 .projects_list {
@@ -162,8 +162,8 @@ body {
 }
 
 .projects_list .card-header {
-    background: #ffd166;
-    color: #fefefd;
+    /*background: #ffd166;
+    color: #fefefd;*/
 }
 /*
 
