@@ -13,10 +13,14 @@ var menu_app = new Vue({
             { title: "Settings", access: "", controller: "settings_section"},
             { title: "Log Out", access: "", controller: "log_out"} ],
         show_list: false,
-        page: "Main"
+        page: "Main",
     },
     methods: {
         menuTrigger(action) {
+            
+            /*http.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+              .then(response => console.log("Yess"))*/
+            
             if (action) {
                 this.$refs.menu.style.width = "250px";
                 this.$refs.openMenuButton.style.marginLeft = "250px";
@@ -65,7 +69,9 @@ var page_app = new Vue({
 });
 
 
-
+const http = axios.create({
+    baseURL: './'
+})
 
 
 // Comments //
