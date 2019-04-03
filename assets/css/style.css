@@ -108,7 +108,7 @@ body {
 }
 
 .page_app {
-    margin-left: -55px;
+    margin-left: -56px;
     padding-top: 35px;
 }
 
@@ -174,7 +174,7 @@ body {
 }
 
 .links-row {
-    margin-top: 63px;
+    margin-top: 64px;
 }
 
 .projects_list {
@@ -227,7 +227,7 @@ body {
 .one, .two, .three{
     position:absolute;
 	margin-top:-10px;
-	/*z-index:0;*/
+	z-index:1;
 	height:40px;
 	width:40px;
 	border-radius:25px;
@@ -260,6 +260,9 @@ body {
 .no-color{
 	background-color:inherit;
 }
+
+
+
 
 
 
