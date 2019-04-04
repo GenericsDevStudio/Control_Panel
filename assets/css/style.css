@@ -273,6 +273,28 @@ body {
 }
 
 
+/* ///////// Admin page Stylesheet ///////// */
+
+
+.admin-card {
+    height: 520px;
+}
+
+.admin-card .users-list {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+}
+
+.admin-card .projects-list {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+}
+
+
+
+
 /*
 
 a[data-toggle="collapse"] {
