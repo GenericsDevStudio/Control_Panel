@@ -1,4 +1,4 @@
-.a {
+.projects-info-container .a {
     text-align: center;
 }
 
@@ -21,6 +21,8 @@
 .information-tabs .tab-pane {
     min-height: 325px;
 }
-.jumbotron{
-     border-radius: 0 !important;
+
+.project-information-content .jumbotron {
+    border-radius: 0 !important;
+    padding-top: 30px;
 }
