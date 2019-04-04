@@ -1,3 +1,15 @@
 .admin-card {
     height: 520px;
 }
+
+.users-list {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+}
+
+.projects-list {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+}
