@@ -21,6 +21,44 @@
 </head>
 
 <body>
+    <nav class="nvbrhght navbar navbar-expand-md navbar-dark">
+
+
+        <!-- Toggler/collapsibe Button -->
+        <div class="menu_app col-md-1">
+            <div class="sidenav" ref="menu">
+                <button class="menu_button close_button" @click="menuTrigger(false)"><i class="fas fa-times fa-xs"></i></button>
+                <transition name="fade">
+                    <ul v-if="show_list" class="menu_list">
+                        <li v-for="item in menuList" ref="menuButton">
+                            <button @click="onMenuBtnClick(item.controller)" class="menu_button">{{ item.title }}</button>
+                        </li>
+                    </ul>
+                </transition>
+            </div>
+            <div id="open_menu_button" ref="openMenuButton">
+                <span @click="menuTrigger(true)"><i class="icnclr fas fa-bars"></i></span>
+            </div>
+
+        </div>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+            </ul>
+        </div>
+        <div class="topnav-right">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sanya Teamlead</a>
+                </li>
+                <a href="#"><i class="icnclr fas fa-cog"></i></a>
+            </ul>
+
+        </div>
+    </nav>
 
     <div class="container-fluid window">
         <div class="row">
@@ -28,21 +66,9 @@
             <!-- Menu -->
 
             <div class="menu_app col-md-1">
-                <div class="sidenav" ref="menu">
-                    <button class="menu_button close_button" @click="menuTrigger(false)"><i class="fas fa-times fa-xs"></i></button>
-                    <transition name="fade">
-                        <ul v-if="show_list" class="menu_list">
-                            <li v-for="item in menuList" ref="menuButton">
-                                <button @click="onMenuBtnClick(item.controller)" class="menu_button">{{ item.title }}</button>
-                            </li>
-                        </ul>
-                    </transition>
-                </div>
-                <div id="open_menu_button" ref="openMenuButton">
-                    <span @click="menuTrigger(true)"><i class="fas fa-bars"></i></span>
-                </div>
-            </div>
 
+
+            </div>
             <!-- //// -->
 
             <div class="blured_space" ref="blured_space"></div>
@@ -60,454 +86,453 @@
             <!-- /////// -->
 
         </div>
-    </div>
 
-    <!-- ////////////////////////// Templates ////////////////////////// -->
-
+        <!-- ////////////////////////// Templates ////////////////////////// -->
 
 
-    <!-- Main Section -->
 
-    <template id="main-template">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card huge_list">
-                        <div class="card-header">
-                            News
-                        </div>
-                        <div class="card-body clients_list container-fluid">
-                            <p>Cooming Soon...</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Main Section -->
 
-                <div class="col-md-6">
-                    <div class="row row-one">
-                        <div class="col-md-12">
-                            <div class="card boxsz">
-                                <div class="card-header header boxsz" id="myDIV">
-                                    ToDo List
-                                </div>
-                                <div class="card-body todo_list">
-                                    <ul id="myUL " class="mrgn ">
-                                        <li class="ulliz">Do the site</li>
-                                        <li class="ulliz">Apply Changes</li>
-                                        <li class="ulliz">More</li>
-                                        <li class="ulliz">And More</li>
-                                    </ul>
-                                </div>
+        <template id="main-template">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card huge_list">
+                            <div class="card-header">
+                                News
+                            </div>
+                            <div class="card-body clients_list container-fluid">
+                                <p>Cooming Soon...</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row row-two">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    Progress
+                    <div class="col-md-6">
+                        <div class="row row-one">
+                            <div class="col-md-12">
+                                <div class="card boxsz">
+                                    <div class="card-header header boxsz" id="myDIV">
+                                        ToDo List
+                                    </div>
+                                    <div class="card-body todo_list">
+                                        <ul id="myUL " class="mrgn ">
+                                            <li class="ulliz">Do the site</li>
+                                            <li class="ulliz">Apply Changes</li>
+                                            <li class="ulliz">More</li>
+                                            <li class="ulliz">And More</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p>Cooming Soon...</p>
+                            </div>
+                        </div>
+
+                        <div class="row row-two">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Progress
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Cooming Soon...</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </template>
+        </template>
 
 
 
 
-    <!-- Workspace Section -->
+        <!-- Workspace Section -->
 
-    <template id="workspace-template">
-        <div>Workspace</div>
-    </template>
-
-
+        <template id="workspace-template">
+            <div>Workspace</div>
+        </template>
 
 
-    <!-- Projects Section -->
 
-    <template id="projects-template">
-        <div class="container-fluid">
-            <div class="row">
 
-                <div class="col-md-8">
-                    <div class="card huge_list current_project">
-                        <div class="card-header">
-                            Current Project
-                        </div>
-                        <div class="card-body container-fluid ">
-                            <div class="row project-name-header-row">
-                                <div class="col-md-12">
-                                    <h2 class="text-center ">Control Panel Project</h2>
-                                </div>
+        <!-- Projects Section -->
+
+        <template id="projects-template">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <div class="card huge_list current_project">
+                            <div class="card-header">
+                                Current Project
                             </div>
-                            <div class="row project-progress-row">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="progress">
-                                                <!-- <hr >-->
-                                                <div class="one success-color"></div>
-                                                <div class="two success-color"></div>
-                                                <div class="three no-color"></div>
-                                                <div class="progress-bar bg-success" style="width: 60%"></div>
-                                                <!-- <hr >-->
+                            <div class="card-body container-fluid ">
+                                <div class="row project-name-header-row">
+                                    <div class="col-md-12">
+                                        <h2 class="text-center ">Control Panel Project</h2>
+                                    </div>
+                                </div>
+                                <div class="row project-progress-row">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="progress">
+                                                    <!-- <hr >-->
+                                                    <div class="one success-color"></div>
+                                                    <div class="two success-color"></div>
+                                                    <div class="three no-color"></div>
+                                                    <div class="progress-bar bg-success" style="width: 60%"></div>
+                                                    <!-- <hr >-->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row links-row">
-                                <div class="col-md-12">
-                                    <div class="text-right">
-                                        <a href="working-space-template.html" class="text-muted">Working Panel</a>
-                                        <a href="project-info-template.html">More Information</a>
+                                <div class="row links-row">
+                                    <div class="col-md-12">
+                                        <div class="text-right">
+                                            <a href="working-space-template.html" class="text-muted">Working Panel</a>
+                                            <a href="project-info-template.html">More Information</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row bottom-row">
-                                <div class="col-md-6 card news-card">
-                                    <div class="card-header">
-                                        News
+                                <div class="row bottom-row">
+                                    <div class="col-md-6 card news-card">
+                                        <div class="card-header">
+                                            News
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Cras justo odio</li>
+                                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item">Morbi leo risus</li>
+                                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                                <li class="list-group-item">Vestibulum at eros</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="card-body">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Cras justo odio</li>
-                                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                                            <li class="list-group-item">Morbi leo risus</li>
-                                            <li class="list-group-item">Porta ac consectetur ac</li>
-                                            <li class="list-group-item">Vestibulum at eros</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 card comments-card">
-                                    <div class="card-header">
-                                        Comments
-                                    </div>
-                                    <div class="card-body">
-                                        <ul class="list-unstyled" id="myUL">
-                                            <li>
-                                                <h6 class="mt-0 mb-0 text-primary">Vasyl Kobevko</h6>
-                                                <small>Cras sit amet nibh libero, in gravida nulla. </small>
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <h6 class="mt-0 mb-0 text-primary">Yehor Bublyk</h6>
-                                                <small>Cras sit amet nibh libero, in gravida nulla. </small>
+                                    <div class="col-md-6 card comments-card">
+                                        <div class="card-header">
+                                            Comments
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled" id="myUL">
+                                                <li>
+                                                    <h6 class="mt-0 mb-0 text-primary">Vasyl Kobevko</h6>
+                                                    <small>Cras sit amet nibh libero, in gravida nulla. </small>
+                                                </li>
+                                                <hr>
+                                                <li>
+                                                    <h6 class="mt-0 mb-0 text-primary">Yehor Bublyk</h6>
+                                                    <small>Cras sit amet nibh libero, in gravida nulla. </small>
 
-                                            </li>
-                                            <hr>
-                                            <li>
-                                                <h6 class="mt-0 mb-0 text-primary">Alex Tichkosky</h6>
-                                                <small>Cras sit amet nibh libero, in gravida nulla. </small>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card projects_list">
-                                <div class="card-header">
-                                    Projects List
-                                </div>
-                                <div class="card-body">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action active">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Control Panel Project</h5>
-                                                <small>In progress</small>
-                                            </div>
-                                            <p class="mb-1">Control Panel for Generics Development Studio. Develop using Logic, Skill and Stamina.</p>
-                                            <small>HTML, CSS, JavaScript, VueJS, Bootstrap.</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">List group item heading</h5>
-                                                <small class="text-muted">3 days ago</small>
-                                            </div>
-                                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                            <small class="text-muted">Donec id elit non mi porta.</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">List group item heading</h5>
-                                                <small class="text-muted">3 days ago</small>
-                                            </div>
-                                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                            <small class="text-muted">Donec id elit non mi porta.</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">List group item heading</h5>
-                                                <small class="text-muted">3 days ago</small>
-                                            </div>
-                                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                            <small class="text-muted">Donec id elit non mi porta.</small>
-                                        </a>
+                                                </li>
+                                                <hr>
+                                                <li>
+                                                    <h6 class="mt-0 mb-0 text-primary">Alex Tichkosky</h6>
+                                                    <small>Cras sit amet nibh libero, in gravida nulla. </small>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="col-md-4">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card projects_list">
+                                    <div class="card-header">
+                                        Projects List
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Control Panel Project</h5>
+                                                    <small>In progress</small>
+                                                </div>
+                                                <p class="mb-1">Control Panel for Generics Development Studio. Develop using Logic, Skill and Stamina.</p>
+                                                <small>HTML, CSS, JavaScript, VueJS, Bootstrap.</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">List group item heading</h5>
+                                                    <small class="text-muted">3 days ago</small>
+                                                </div>
+                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                <small class="text-muted">Donec id elit non mi porta.</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">List group item heading</h5>
+                                                    <small class="text-muted">3 days ago</small>
+                                                </div>
+                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                <small class="text-muted">Donec id elit non mi porta.</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">List group item heading</h5>
+                                                    <small class="text-muted">3 days ago</small>
+                                                </div>
+                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                <small class="text-muted">Donec id elit non mi porta.</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </template>
+        </template>
 
 
 
 
-    <!-- Statistics Section -->
+        <!-- Statistics Section -->
 
-    <template id="statistics-template">
-        <div>Statistics</div>
-    </template>
-
-
-
-
-    <!-- Team Section -->
-
-    <template id="team-template">
-        <div>Team</div>
-    </template>
+        <template id="statistics-template">
+            <div>Statistics</div>
+        </template>
 
 
 
 
-    <!-- Apps Section -->
+        <!-- Team Section -->
 
-    <template id="apps-template">
-        <div>Apps</div>
-    </template>
-
-
+        <template id="team-template">
+            <div>Team</div>
+        </template>
 
 
-    <!-- Admin Section -->
 
-    <template id="admin-template">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card text-center admin-card">
-                        <div class="card-header">
-                            <ul class="nav nav-pills card-header-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="pill" href="#v-pills-projects">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="pill" href="#v-pills-users">Users</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Servers</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body tab-content">
-                            <!--<h5 class="card-title">Special title treatment</h5>
+
+        <!-- Apps Section -->
+
+        <template id="apps-template">
+            <div>Apps</div>
+        </template>
+
+
+
+
+        <!-- Admin Section -->
+
+        <template id="admin-template">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card text-center admin-card">
+                            <div class="card-header">
+                                <ul class="nav nav-pills card-header-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#v-pills-projects">Projects</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#v-pills-users">Users</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Servers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <!--<h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
-                            <div class="tab-pane fade show active" id="v-pills-projects" role="tabpanel" aria-labelledby="v-pills-projects-tab">
-                                <div class="row">
-                                    <div class="col-1">
+                                <div class="tab-pane fade show active" id="v-pills-projects" role="tabpanel" aria-labelledby="v-pills-projects-tab">
+                                    <div class="row">
+                                        <div class="col-1">
 
-                                    </div>
-                                    <div class="col-8">
+                                        </div>
+                                        <div class="col-8">
 
+                                        </div>
+                                        <div class="col-3 float-right">
+                                            <div class="list-group projects-list">
+                                                <a href="#" class="list-group-item list-group-item-action active">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">Control Panel Project</h5>
+                                                        <small>In progress</small>
+                                                    </div>
+                                                    <p class="mb-1">Control Panel for Generics Development Studio. Develop using Logic, Skill and Stamina.</p>
+                                                    <small>HTML, CSS, JavaScript, VueJS, Bootstrap.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-3 float-right">
-                                        <div class="list-group projects-list">
-                                            <a href="#" class="list-group-item list-group-item-action active">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">Control Panel Project</h5>
-                                                    <small>In progress</small>
-                                                </div>
-                                                <p class="mb-1">Control Panel for Generics Development Studio. Develop using Logic, Skill and Stamina.</p>
-                                                <small>HTML, CSS, JavaScript, VueJS, Bootstrap.</small>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">List group item heading</h5>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                <small class="text-muted">Donec id elit non mi porta.</small>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">List group item heading</h5>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                <small class="text-muted">Donec id elit non mi porta.</small>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">List group item heading</h5>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                <small class="text-muted">Donec id elit non mi porta.</small>
-                                            </a>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-users" role="tabpanel" aria-labelledby="v-pills-users-tab">
+
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="float-left">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add User</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+
+                                        </div>
+                                        <div class="col-3 float-right">
+                                            <div class="list-group users-list">
+                                                <a href="#" class="list-group-item list-group-item-action active">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">Control Panel Project</h5>
+                                                        <small>In progress</small>
+                                                    </div>
+                                                    <p class="mb-1">Control Panel for Generics Development Studio. Develop using Logic, Skill and Stamina.</p>
+                                                    <small>HTML, CSS, JavaScript, VueJS, Bootstrap.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">List group item heading</h5>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                    <small class="text-muted">Donec id elit non mi porta.</small>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="v-pills-users" role="tabpanel" aria-labelledby="v-pills-users-tab">
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="float-left">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add User</button>
-                                        </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Add User</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Name</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
                                     </div>
-                                    <div class="col-7">
-
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                     </div>
-                                    <div class="col-3 float-right">
-                                        <div class="list-group users-list">
-                                            <a href="#" class="list-group-item list-group-item-action active">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">Control Panel Project</h5>
-                                                    <small>In progress</small>
-                                                </div>
-                                                <p class="mb-1">Control Panel for Generics Development Studio. Develop using Logic, Skill and Stamina.</p>
-                                                <small>HTML, CSS, JavaScript, VueJS, Bootstrap.</small>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">List group item heading</h5>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                <small class="text-muted">Donec id elit non mi porta.</small>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">List group item heading</h5>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                <small class="text-muted">Donec id elit non mi porta.</small>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">List group item heading</h5>
-                                                    <small class="text-muted">3 days ago</small>
-                                                </div>
-                                                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                <small class="text-muted">Donec id elit non mi porta.</small>
-                                            </a>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Position</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Javascript Developer">
                                     </div>
-                                </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Access</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option selected="selected">None</option>
+                                            <option>Administrator</option>
+                                            <option>Project Manager</option>
+                                            <option>Applications Manager</option>
+                                            <option>Blogger</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Skills</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
+
             </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">Add User</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Name</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Position</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Javascript Developer">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Access</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option selected="selected">None</option>
-                                        <option>Administrator</option>
-                                        <option>Project Manager</option>
-                                        <option>Applications Manager</option>
-                                        <option>Blogger</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Skills</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </template>
+        </template>
 
 
 
 
-    <!-- Blog Section -->
+        <!-- Blog Section -->
 
-    <template id="blog-template">
-        <div>Blog</div>
-    </template>
-
-
+        <template id="blog-template">
+            <div>Blog</div>
+        </template>
 
 
-    <!-- Settings Section -->
-
-    <template id="settings-template">
-        <div>Settings</div>
-
-    </template>
 
 
-    <!-- ////////////////////////// ///////// ////////////////////////// -->
+        <!-- Settings Section -->
+
+        <template id="settings-template">
+            <div>Settings</div>
+
+        </template>
 
 
-    <!-- Scripts -->
+        <!-- ////////////////////////// ///////// ////////////////////////// -->
 
-    <!--<script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>-->
-    <script type="application/javascript" src="assets/js/jquery-3.3.1.js"></script>
-    <script type="application/javascript" src="assets/js/bootstrap.min.js"></script>
-    <!-- Скрипты подключать вместо этой строки -->
-    <script type="application/javascript" src="assets/js/vue.js"></script>
-    <script type="application/javascript" src="assets/js/axios.js"></script>
-    <!--<script type="application/javascript" src="assets/js/vue-router.js"></script>-->
-    <script type="application/javascript" src="assets/js/components.js"></script>
-    <script type="application/javascript" src="assets/js/main_script.js"></script>
+
+        <!-- Scripts -->
+
+        <!--<script type="application/javascript" src="assets/js/jquery-3.3.1.min.js"></script>-->
+        <script type="application/javascript" src="assets/js/jquery-3.3.1.js"></script>
+        <script type="application/javascript" src="assets/js/bootstrap.min.js"></script>
+        <!-- Скрипты подключать вместо этой строки -->
+        <script type="application/javascript" src="assets/js/vue.js"></script>
+        <script type="application/javascript" src="assets/js/axios.js"></script>
+        <!--<script type="application/javascript" src="assets/js/vue-router.js"></script>-->
+        <script type="application/javascript" src="assets/js/components.js"></script>
+        <script type="application/javascript" src="assets/js/main_script.js"></script>
 </body>
 
 </html>

@@ -261,6 +261,18 @@ body {
 	background-color:inherit;
 }
 
+/*Custom Navbar*/
+.nvbrhght{
+    height: 50px;
+    background-color: #111;
+
+}
+
+.icnclr{
+    color: lightgray;
+    width: 40px;
+    height: 40px;
+}
 
 
 
