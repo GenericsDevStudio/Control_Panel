@@ -16,6 +16,10 @@ body {
     padding-top: 60px;
 }
 
+.window {
+    padding: 0;
+}
+
 .sidenav .close_button {
     position: absolute;
     top: 0;
@@ -108,9 +112,22 @@ body {
 }
 
 .page_app {
-    margin-left: -56px;
-    padding-top: 35px;
+    /*margin-left: -56px;*/
+    padding-top: 15px;
 }
+
+.now-margin-row {
+    margin: 0;
+}
+
+.menu_app {
+    padding: 0;
+}
+
+/*.nvbrhght {
+    margin-left: -20px;
+    margin-right: -20px;
+}*/
 
 .card {
     height: 175px;
