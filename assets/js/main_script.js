@@ -14,6 +14,7 @@ var menu_app = new Vue({
             { title: "Log Out", access: "", controller: "log_out"} ],
         show_list: false,
         page: "Main",
+        currentSection: 'main_section'
     },
     methods: {
         menuTrigger(action) {
@@ -44,6 +45,7 @@ var menu_app = new Vue({
 
         onMenuBtnClick(section) {
             //alert(section);
+            this.currentSection = section;
             if(section == "log_out") {      
                 // TODO
                 document.location.href = "login_page.html";
