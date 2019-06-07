@@ -1,20 +1,25 @@
+/*function getUserFromStorage() {
+    return JSON.parse(localStorage.getItem('user'));
+};*/
+
 var menu_app = new Vue({
     el: '.menu_app',
     data: {
         menuList: [
-            { title: "Main", access: "", controller: "main_section"},
-            { title: "Workspace", access: "", controller: "workspace_section"},
-            { title: "Projects", access: "", controller: "projects_section"},
-            { title: "Statistics", access: "", controller: "statistics_section"},
-            { title: "Team", access: "", controller: "team_section"},
-            { title: "Apps", access: "", controller: "apps_section"},
-            { title: "Admin Panel", access: "", controller: "admin_section"},
-            { title: "Blog", access: "", controller: "blog_section"},
-            { title: "Settings", access: "", controller: "settings_section"},
-            { title: "Log Out", access: "", controller: "log_out"} ],
+            { title: "Main", access: "None", controller: "main_section", image: "fas fa-home"},
+            { title: "Workspace", access: "None", controller: "workspace_section", image: "far fa-clipboard"},
+            { title: "Projects", access: "None", controller: "projects_section", image: "fas fa-thumbtack"}, // fas fa-tasks
+            { title: "Statistics", access: "None", controller: "statistics_section", image: "fas fa-chart-pie"},
+            { title: "Team", access: "None", controller: "team_section", image: "fas fa-users"},
+            { title: "Apps", access: "Admin", controller: "apps_section", image: "fas fa-mobile"},
+            { title: "Admin Panel", access: "Admin", controller: "admin_section", image: "fas fa-sitemap"}, // far fa-keyboard
+            { title: "Blog", access: "Blogger", controller: "blog_section", image: "far fa-newspaper"},
+            /*{ title: "Settings", access: "None", controller: "settings_section"},*/
+            { title: "Log Out", access: "None", controller: "log_out", image: "fas fa-home"} ],
         show_list: false,
         page: "Main",
-        currentSection: 'main_section'
+        currentSection: 'Main',
+        //currentUser: getUserFromStorage()
     },
     methods: {
         menuTrigger(action) {
@@ -43,12 +48,20 @@ var menu_app = new Vue({
             }
         },
 
-        onMenuBtnClick(section) {
+        onMenuBtnClick(section, title) {
             //alert(section);
-            this.currentSection = section;
+            this.currentSection = title;
             if(section == "log_out") {      
-                // TODO
-                document.location.href = "login_page.html";
+                axios.get('http://control.generics.space/api', {
+                    params: {
+                        logOut: {}
+                    }
+                }).then(response => {
+                    console.log(response.data);
+                    if (response.data == "1") {
+                        document.location.href = "index.php";
+                    }
+                });
             } else {
                 page_app.$data.currentSection = section;
                 this.menuTrigger(false);
@@ -74,7 +87,7 @@ var page_app = new Vue({
 const http = axios.create({
     baseURL: './'
 })
-
+  
 
 // Comments //
 

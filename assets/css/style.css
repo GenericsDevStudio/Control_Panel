@@ -33,6 +33,10 @@ body {
     padding: 16px;
 }
 
+.topnav-right {
+    padding-top: 5px;
+}
+
 #open_menu_button span {
     font-size: 30px;
     cursor: pointer;
