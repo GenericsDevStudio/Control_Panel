@@ -1,4 +1,4 @@
-var colors = ['#5603ad','#fd5d93','#8965e0','#c3e6cb','#dc3545','#6c757d'];
+var colors = ['#d048b6','#00d6b4','#1f8ef1','#c3e6cb','#dc3545','#6c757d'];
 
 /* large line chart */
 var chLine = document.getElementById("chLine");
